@@ -120,14 +120,14 @@ function AdminDashboard() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.setAttribute("download", `homa-bay-hris-attendance-${Date.now()}.csv`);
+    link.setAttribute("download", `homa-bay-hrmis-attendance-${Date.now()}.csv`);
     document.body.appendChild(link);
     link.click();
     link.remove();
   };
 
   const downloadQR = () => {
-    const svg = document.getElementById("hris-launch-qr");
+    const svg = document.getElementById("hrmis-launch-qr");
     if (!svg) return;
     const svgData = new XMLSerializer().serializeToString(svg);
     const canvas = document.createElement("canvas");
@@ -143,7 +143,7 @@ function AdminDashboard() {
         ctx.drawImage(img, padding, padding);
         const pngFile = canvas.toDataURL("image/png");
         const downloadLink = document.createElement("a");
-        downloadLink.download = "hris-launch-qr.png";
+        downloadLink.download = "hrmis-launch-qr.png";
         downloadLink.href = `${pngFile}`;
         downloadLink.click();
       }
@@ -196,11 +196,11 @@ function AdminDashboard() {
             <div className="flex flex-col items-center text-center">
               <h2 className="text-[20px] font-bold text-[#0a1628]">Launch QR Code</h2>
               <p className="mt-2 text-[14px] text-[#0a1628]/60">
-                Guests scan this to check in to the Homa Bay County HRIS launch.
+                Guests scan this to check in to the Homa Bay County HRMIS launch.
               </p>
               <div className="mt-6 rounded-xl border border-[#0a1628]/10 p-4 bg-white">
                 <QRCodeSVG
-                  id="hris-launch-qr"
+                  id="hrmis-launch-qr"
                   value={window.location.origin}
                   size={200}
                   level="H"

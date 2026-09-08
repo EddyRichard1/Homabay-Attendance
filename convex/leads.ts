@@ -1,7 +1,7 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
-const EVENT_ID = "homa-bay-hris-launch";
+const EVENT_ID = "homa-bay-hrmis-launch";
 const DEFAULT_STATUS = "checked_in";
 
 export const submit = mutation({

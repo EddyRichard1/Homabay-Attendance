@@ -41,6 +41,7 @@ export interface ScreenContent {
   overview?: string;
   primary_cta?: string;
   skip_cta?: string;
+  pdf_cta?: string;
   step_label?: string;
   context_stats?: { num: string; label: string }[];
   proof_points?: { title: string; text: string }[];

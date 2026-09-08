@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Homa Bay County HRIS tokens */
+  /* Homa Bay County HRMIS tokens */
   --color-cs-navy-deep: #0c2d48;
   --color-cs-navy-mid: #1e4976;
   --color-cs-navy-surface: #0d4f73;

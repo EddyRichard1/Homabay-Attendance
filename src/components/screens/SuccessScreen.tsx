@@ -38,7 +38,7 @@ export const SuccessScreen: React.FC<SuccessScreenProps> = ({ flow }) => {
     : selectedOptions.map(o => o.feedback?.tag || o.label);
 
   return (
-    <div className="flex flex-1 flex-col items-center px-8 pt-4 text-center pb-40">
+    <div className="flex flex-1 flex-col items-center px-8 pt-4 text-center pb-52">
       <motion.div 
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -101,6 +101,20 @@ export const SuccessScreen: React.FC<SuccessScreenProps> = ({ flow }) => {
           }}
         >
           {screen.content.cta}
+        </PrecisionButton>
+        <PrecisionButton
+          variant="ghost"
+          className="mt-2 w-full"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = CONFIG.TUTORIAL_PDF;
+            link.download = "Homa_Bay_County_HRMIS_User_Guide_Official.pdf";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          }}
+        >
+          {screen.content.pdf_cta || "Download tutorial"}
         </PrecisionButton>
         <PrecisionButton
           variant="ghost"

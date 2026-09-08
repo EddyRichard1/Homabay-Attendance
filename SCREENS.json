@@ -5,7 +5,7 @@
       "type": "splash",
       "content": {
         "headline": "Homa Bay County",
-        "subtext": "Human Resources Information System"
+        "subtext": "Human Resource Management Information System"
       },
       "behavior": {
         "auto_advance": true,
@@ -17,14 +17,14 @@
       "type": "conversational",
       "content": {
         "step_label": "STEP 1 OF 4",
-        "question": ["Welcome to the", "HRIS launch."],
-        "subtext": "You're checking in for the Homa Bay County Human Resources Information System launch. Let's start with your name.",
+        "question": ["Welcome to the", "HRMIS launch."],
+        "subtext": "You're checking in for the Homa Bay County Human Resource Management Information System launch. Let's start with your name.",
         "label": "FULL NAME",
         "placeholder": "Enter your name...",
         "cta": "Continue →",
         "context_stats": [
           { "num": "County", "label": "Homa Bay" },
-          { "num": "HRIS", "label": "Go-live" },
+          { "num": "HRMIS", "label": "Go-live" },
           { "num": "QR", "label": "Check-in" }
         ]
       },
@@ -36,14 +36,14 @@
       "content": {
         "step_label": "STEP 2 OF 4",
         "question": ["Nice to meet you,", "{name}.", "Where do you serve?"],
-        "subtext": "Your department and role help us record who attended the HRIS launch.",
+        "subtext": "Your department and role help us record who attended the HRMIS launch.",
         "fields": [
           { "id": "organisation", "label": "DEPARTMENT / ORGANISATION", "type": "text", "placeholder": "e.g. Department of Health, Homa Bay County" },
           { "id": "role", "label": "YOUR ROLE", "type": "text", "placeholder": "e.g. HR Officer" }
         ],
         "proof_card": {
           "title": "One system for the county workforce",
-          "text": "HRIS streamlines workforce management across all county departments — from records to payroll."
+          "text": "HRMIS streamlines workforce management across all county departments — from records to payroll."
         },
         "cta": "Next →"
       }
@@ -54,14 +54,14 @@
       "content": {
         "step_label": "STEP 3 OF 4",
         "question": ["How should we reach you,", "{name}?"],
-        "subtext": "We'll use this only for launch follow-up from the Homa Bay HRIS team. No sales brief.",
+        "subtext": "We'll use this only for launch follow-up from the Homa Bay HRMIS team. No sales brief.",
         "fields": [
           { "id": "email", "label": "EMAIL", "type": "email", "placeholder": "your@email.com" },
           { "id": "phone", "label": "PHONE", "type": "tel", "placeholder": "+254 700 000 000" }
         ],
         "proof_card": {
           "title": "Launch attendance only",
-          "text": "Your details confirm you checked in today. The HRIS team may follow up about access or training."
+          "text": "Your details confirm you checked in today. The HRMIS team may follow up about access or training."
         },
         "cta": "Who are you here as? →"
       }
@@ -77,25 +77,25 @@
           {
             "id": "county_staff",
             "label": "County staff",
-            "description": "Homa Bay County Government officer attending the HRIS launch.",
+            "description": "Homa Bay County Government officer attending the HRMIS launch.",
             "proof": "County workforce",
             "cta_label": "Check me in →",
             "icon": "Building2",
             "feedback": {
-              "subtext": "You're checked in as county staff. You can sign in to the HRIS when you're ready.",
-              "tag": "County staff · HRIS"
+              "subtext": "You're checked in as county staff. You can sign in to the HRMIS when you're ready.",
+              "tag": "County staff · HRMIS"
             }
           },
           {
             "id": "cpsb",
             "label": "County Public Service Board",
-            "description": "CPSB member or secretariat supporting public service and HRIS go-live.",
+            "description": "CPSB member or secretariat supporting public service and HRMIS go-live.",
             "proof": "CPSB",
             "cta_label": "Check me in →",
             "icon": "Landmark",
             "feedback": {
-              "subtext": "You're checked in with the County Public Service Board. You can sign in to the HRIS when you're ready.",
-              "tag": "CPSB · HRIS"
+              "subtext": "You're checked in with the County Public Service Board. You can sign in to the HRMIS when you're ready.",
+              "tag": "CPSB · HRMIS"
             }
           },
           {
@@ -106,8 +106,8 @@
             "cta_label": "Check me in →",
             "icon": "UserCog",
             "feedback": {
-              "subtext": "You're checked in as departmental HR. You can sign in to the HRIS when you're ready.",
-              "tag": "Departmental HR · HRIS"
+              "subtext": "You're checked in as departmental HR. You can sign in to the HRMIS when you're ready.",
+              "tag": "Departmental HR · HRMIS"
             }
           },
           {
@@ -118,8 +118,8 @@
             "cta_label": "Check me in →",
             "icon": "Briefcase",
             "feedback": {
-              "subtext": "You're checked in as executive / leadership. You can sign in to the HRIS when you're ready.",
-              "tag": "Executive · HRIS"
+              "subtext": "You're checked in as executive / leadership. You can sign in to the HRMIS when you're ready.",
+              "tag": "Executive · HRMIS"
             }
           },
           {
@@ -130,8 +130,8 @@
             "cta_label": "Check me in →",
             "icon": "Handshake",
             "feedback": {
-              "subtext": "You're checked in as a partner or vendor. You can sign in to the HRIS when you're ready.",
-              "tag": "Partner · HRIS"
+              "subtext": "You're checked in as a partner or vendor. You can sign in to the HRMIS when you're ready.",
+              "tag": "Partner · HRMIS"
             }
           },
           {
@@ -142,8 +142,8 @@
             "cta_label": "Check me in →",
             "icon": "Newspaper",
             "feedback": {
-              "subtext": "You're checked in as a guest. Welcome to the Homa Bay County HRIS launch.",
-              "tag": "Guest · HRIS"
+              "subtext": "You're checked in as a guest. Welcome to the Homa Bay County HRMIS launch.",
+              "tag": "Guest · HRMIS"
             }
           }
         ],
@@ -155,16 +155,17 @@
       "type": "confirmation",
       "content": {
         "headline": ["You're checked in,", "{name}."],
-        "subtext": "You're on the Homa Bay County HRIS launch attendance list. You can sign in to the HR system next.",
-        "multi_subtext": "You're on the attendance list with your selected affiliations. You can sign in to the HRIS when you're ready.",
-        "skip_subtext": "You're on the attendance list. You can sign in to the HRIS when you're ready.",
-        "tag_fallback": "Homa Bay County HRIS",
+        "subtext": "You're on the Homa Bay County HRMIS launch attendance list. You can sign in to the HR system next.",
+        "multi_subtext": "You're on the attendance list with your selected affiliations. You can sign in to the HRMIS when you're ready.",
+        "skip_subtext": "You're on the attendance list. You can sign in to the HRMIS when you're ready.",
+        "tag_fallback": "Homa Bay County HRMIS",
         "cta": "Open HR System",
+        "pdf_cta": "Download tutorial",
         "skip_cta": "Check in another guest",
         "next_steps": [
           "You're recorded on today's launch attendance list",
-          "Sign in to the Homa Bay County HRIS when you need access",
-          "The HRIS team may follow up about training or accounts"
+          "Sign in to the Homa Bay County HRMIS when you need access",
+          "The HRMIS team may follow up about training or accounts"
         ]
       }
     }
