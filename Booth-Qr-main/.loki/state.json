@@ -1,0 +1,46 @@
+{
+  "project_name": "Booth Qr",
+  "status": "discovery",
+  "tech_stack": [
+    "Vite",
+    "React",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Convex",
+    "Clerk",
+    "Framer Motion"
+  ],
+  "milestones": [
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap Project",
+      "status": "in_progress"
+    },
+    {
+      "id": "scaffold",
+      "name": "Scaffold App",
+      "status": "todo"
+    },
+    {
+      "id": "convex_setup",
+      "name": "Convex Backend Setup",
+      "status": "todo"
+    },
+    {
+      "id": "clerk_setup",
+      "name": "Clerk Auth Setup",
+      "status": "todo"
+    },
+    {
+      "id": "frontend_build",
+      "name": "Frontend Components & Pages",
+      "status": "todo"
+    },
+    {
+      "id": "deployment",
+      "name": "Deployment to Netlify",
+      "status": "todo"
+    }
+  ],
+  "last_updated": "2026-04-20T08:31:00Z"
+}

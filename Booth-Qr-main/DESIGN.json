@@ -1,0 +1,154 @@
+{
+  "project": "Craft Silicon Booth Lead Capture",
+  "version": "1.2.0",
+  "author": "Antigravity (Google DeepMind)",
+  "philosophy": {
+    "name": "Precision Proactive",
+    "principles": [
+      "Material Authority: No gradients, no glows.",
+      "Solidity: Depth through solid color layering.",
+      "Proactive: Intuitive motion that anticipates user steps."
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "brand": {
+        "primary_blue": "#0A6AE2",
+        "hover_blue": "#0D7AF8",
+        "deep_navy": "#071426",
+        "mid_navy": "#0D2045",
+        "surface_navy": "#132952"
+      },
+      "backgrounds": {
+        "immersive": "#071426",
+        "informational": "#EEF2F8",
+        "card_dark": "#0D2045",
+        "card_light": "#FFFFFF"
+      },
+      "text": {
+        "on_dark": {
+          "primary": "#FFFFFF",
+          "secondary": "rgba(255, 255, 255, 0.60)",
+          "tertiary": "rgba(255, 255, 255, 0.35)"
+        },
+        "on_light": {
+          "primary": "#071426",
+          "secondary": "rgba(7, 20, 38, 0.55)",
+          "tertiary": "rgba(7, 20, 38, 0.36)"
+        }
+      },
+      "ui": {
+        "border_dark": "rgba(255, 255, 255, 0.10)",
+        "border_light": "rgba(7, 20, 38, 0.10)",
+        "error": "#D93025",
+        "success": "#1A7F48"
+      }
+    },
+    "typography": {
+      "stack": {
+        "display": "'Inter', sans-serif",
+        "body": "'Inter', sans-serif"
+      },
+      "features": {
+        "cv11": true,
+        "ss01": true
+      },
+      "hierarchy": {
+        "hero_headline": {
+          "size": "28px",
+          "weight": 600,
+          "line_height": 1.1,
+          "letter_spacing": "-0.022em"
+        },
+        "section_heading": {
+          "size": "22px",
+          "weight": 600,
+          "line_height": 1.14,
+          "letter_spacing": "-0.015em"
+        },
+        "body": {
+          "size": "15px",
+          "weight": 400,
+          "line_height": 1.5,
+          "letter_spacing": "-0.012em"
+        },
+        "label": {
+          "size": "11px",
+          "weight": 500,
+          "line_height": 1.0,
+          "letter_spacing": "+0.08em",
+          "transform": "uppercase"
+        }
+      }
+    },
+    "spacing": {
+      "xs": "6px",
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "xxl": "32px",
+      "hero_v_padding": "48px"
+    },
+    "radius": {
+      "standard": "8px",
+      "card": "10px",
+      "pill": "999px"
+    }
+  },
+  "components": {
+    "public_form": {
+      "background": "#071426",
+      "width_max": "420px",
+      "input": {
+        "style": "underline",
+        "border_color": "rgba(255, 255, 255, 0.15)",
+        "focus_color": "#0A6AE2",
+        "focus_thickness": "2px"
+      },
+      "button": {
+        "background": "#0A6AE2",
+        "text_color": "#FFFFFF",
+        "border_radius": "8px",
+        "active_scale": 0.98
+      }
+    },
+    "conversational_ui": {
+      "mode": "Step-by-Step",
+      "indicators": {
+        "typing": {
+          "dot_count": 3,
+          "dot_color": "rgba(255, 255, 255, 0.4)",
+          "active_dot_color": "#FFFFFF",
+          "duration": "400ms"
+        }
+      }
+    },
+    "admin_dashboard": {
+      "background": "#EEF2F8",
+      "header_bg": "#0D2045",
+      "table": {
+        "border": "1px solid #EEF2F8",
+        "header_bg": "#0D2045",
+        "row_alt_bg": "#F7F9FC"
+      }
+    }
+  },
+  "motion": {
+    "timing": {
+      "fast": "150ms",
+      "standard": "250ms",
+      "entrance": "400ms"
+    },
+    "easing": {
+      "out": "cubic-bezier(0, 0, 0.2, 1)",
+      "spring": "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+    },
+    "patterns": {
+      "question_slide": {
+        "direction": "horizontal",
+        "duration": "300ms"
+      }
+    }
+  }
+}

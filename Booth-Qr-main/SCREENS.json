@@ -1,0 +1,161 @@
+{
+  "screens": [
+    {
+      "id": "splash",
+      "type": "splash",
+      "content": {
+        "headline": "Craft Silicon",
+        "subtext": "Innovation in Financial Technology"
+      },
+      "behavior": {
+        "auto_advance": true,
+        "duration": 1500
+      }
+    },
+    {
+      "id": "name",
+      "type": "conversational",
+      "content": {
+        "step_label": "STEP 1 OF 5",
+        "question": ["Welcome to,", "Craft Silicon booth."],
+        "subtext": "Counties leave revenue on the table every day — because systems don't talk to each other. We fix that. Let's start with your name.",
+        "label": "FULL NAME",
+        "placeholder": "Enter your name...",
+        "cta": "Continue →",
+        "context_stats": [
+          { "num": "4", "label": "Live Counties" },
+          { "num": "25+", "label": "Revenue Streams" },
+          { "num": "10 yr", "label": "Revenue Tech" }
+        ]
+      },
+      "validation": { "required": true }
+    },
+    {
+      "id": "organisation",
+      "type": "conversational_group",
+      "content": {
+        "step_label": "STEP 2 OF 5",
+        "question": ["Nice to meet you,", "{name}.", "Where do you work?"],
+        "subtext": "Knowing your organisation tells us which platform is most relevant — and who on our team should reach out.",
+        "fields": [
+          { "id": "organisation", "label": "ORGANISATION", "type": "text", "placeholder": "e.g. Homa Bay County" },
+          { "id": "role", "label": "YOUR ROLE", "type": "text", "placeholder": "Director of Revenue" }
+        ],
+        "proof_card": {
+          "title": "Solutions for every department",
+          "text": "Whether you're in Revenue, HR, or Health, we have a specialized module built for your county's specific needs."
+        },
+        "cta": "Next →"
+      }
+    },
+    {
+      "id": "contact",
+      "type": "conversational_group",
+      "content": {
+        "step_label": "STEP 3 OF 5",
+        "question": ["Where should we send", "your brief,", "{name}?"],
+        "subtext": "One follow-up. Relevant to your county's situation. No noise.",
+        "fields": [
+          { "id": "email", "label": "DIRECT EMAIL", "type": "email", "placeholder": "your@email.com" },
+          { "id": "phone", "label": "PHONE", "type": "tel", "placeholder": "+254 700 000 000" }
+        ],
+        "proof_card": {
+          "title": "Personalised to your county",
+          "text": "Includes deployment examples from live counties and relevant product modules"
+        },
+        "cta": "Select your area of interest →"
+      }
+    },
+    {
+      "id": "product_list",
+      "type": "selection_grid",
+      "content": {
+        "step_label": "STEP 4 OF 5",
+        "question": ["Which area sparks", "your interest,", "{name}?"],
+        "subtext": "Select one or more. Your brief will be built around them.",
+        "options": [
+          { 
+            "id": "revenue", 
+            "label": "Revenue Growth", 
+            "description": "OSR automation — collect more, leak less, reconcile to IFMIS by morning. Live in 4 counties.", 
+            "proof": "Live in Homa Bay, Meru, Kajiado & Mandera",
+            "cta_label": "Prepare my Revenue brief →",
+            "icon": "Coins",
+            "feedback": {
+              "subtext": "Our county revenue team is preparing your brief. Expect a message within 24 hours.",
+              "tag": "Revenue Growth · CRMS"
+            }
+          },
+          { 
+            "id": "hr_payroll", 
+            "label": "HR & Payroll", 
+            "description": "Eliminate ghost workers. Pass your next payroll audit. KDSP II KRA 2 evidence built in.", 
+            "proof": "12 modules · SHA, NSSF, KRA, Housing Levy",
+            "cta_label": "Prepare my HR & Payroll brief →",
+            "icon": "Users",
+            "feedback": {
+              "subtext": "Our HR and payroll team will reach out with your KDSP II brief shortly.",
+              "tag": "HR & Payroll · StaffSYNC"
+            }
+          },
+          { 
+            "id": "health", 
+            "label": "Health Systems", 
+            "description": "Every patient treated. Every SHA claim paid. DHA-certified, Level 1–6 ready.", 
+            "proof": "Certified under Digital Health Act 2023",
+            "cta_label": "Prepare my Health Systems brief →",
+            "icon": "HeartPulse",
+            "feedback": {
+              "subtext": "Our health systems team will prepare your SHA and HMIS brief and be in touch soon.",
+              "tag": "Health Systems · HMIS"
+            }
+          },
+          { 
+            "id": "livestock", 
+            "label": "Livestock & Trade", 
+            "description": "Every animal verified. Every trade receipted. M-Pesa escrow, movement permits, no cash risk.", 
+            "proof": "5+ species · 90+ data points per animal",
+            "cta_label": "Prepare my Flockr brief →",
+            "icon": "ClipboardCheck",
+            "feedback": {
+              "subtext": "The Flockr team will send you a county pilot brief and reach out shortly.",
+              "tag": "Livestock & Trade · Flockr"
+            }
+          }
+        ],
+        "skip_cta": "Not sure yet — just connect me"
+      }
+    },
+    {
+      "id": "success",
+      "type": "confirmation",
+      "content": {
+        "headline": ["You're connected,", "{name}."],
+        "subtext": "Your personalised brief is being prepared. A member of our team will reach out shortly to schedule your demo.",
+        "multi_subtext": "Our specialist teams are preparing your tailored briefs based on your selected interests. Expect a message within 24 hours.",
+        "skip_subtext": "A member of the Craft Silicon team will be in touch with a tailored brief within 24 hours.",
+        "tag_fallback": "Craft Silicon",
+        "cta": "Download Product PDF",
+        "next_steps": [
+          "Our team reviews your organisation and selected interest",
+          "You receive a personalised brief within 24 hours",
+          "We schedule a discovery call or send product materials — your call"
+        ]
+      }
+    }
+  ],
+  "flow_logic": {
+    "entry": "splash",
+    "transitions": {
+      "splash": "name",
+      "name": "organisation",
+      "organisation": "contact",
+      "contact": "product_list",
+      "product_list": {
+        "select": "success",
+        "skip": "success"
+      }
+    }
+  }
+}
+
