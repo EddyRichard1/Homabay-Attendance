@@ -40,7 +40,7 @@ export const submit = mutation({
   },
 });
 
-const ADMIN_EMAILS = ["rodney@craftsilicon.com", "info@craftsilicon.com"];
+const ADMIN_EMAILS = ["", "info@craftsilicon.com"];
 
 const checkAdmin = (identity: any) => {
   if (!identity) return false;

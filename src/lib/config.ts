@@ -12,7 +12,7 @@ export const CONFIG = {
   },
   ADMIN_ROLES: ["admin"],
   ADMIN_EMAILS: [
-    "rodney@craftsilicon.com", // Main admin
+    "eddyrichard911@gmail.com", // Main admin
     "info@craftsilicon.com"
   ],
 };
