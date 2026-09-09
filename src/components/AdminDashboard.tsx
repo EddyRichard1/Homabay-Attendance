@@ -72,7 +72,11 @@ export default function AdminDashboardWrapper() {
       </SignedIn>
       <SignedOut>
         <div className="flex min-h-[100dvh] items-center justify-center bg-[var(--color-cs-light-bg)]">
-          <SignIn routing="hash" />
+          <SignIn
+            routing="hash"
+            forceRedirectUrl="/admin"
+            signUpForceRedirectUrl="/admin"
+          />
         </div>
       </SignedOut>
     </>

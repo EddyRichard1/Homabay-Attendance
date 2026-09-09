@@ -9,3 +9,6 @@ dist-ssr
 .claude/
 .agents/
 skills-lock.json
+
+# Local Netlify folder
+.netlify
